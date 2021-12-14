@@ -1,14 +1,13 @@
 package com.example.MiniProject;
 
 import org.springframework.boot.SpringApplication;
-//First one
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+//Sasikanth
 public class Sprint11Application{
 
 	public static void main(String[] args) {
 		SpringApplication.run(Sprint11Application.class, args);
 	}
-
 }
