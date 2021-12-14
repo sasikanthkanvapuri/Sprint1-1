@@ -1,10 +1,10 @@
 package com.example.MiniProject;
 
 import org.springframework.boot.SpringApplication;
+//First one
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-//First
 public class Sprint11Application{
 
 	public static void main(String[] args) {
