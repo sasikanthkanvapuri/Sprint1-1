@@ -23,7 +23,7 @@ public class CustomerController {
 		customerService.createCustomer(customer);
 		accountController.createAccount(customer.getAcctID(), 0, "Active");
 	}
-
+//no comments
 	@GetMapping("/customer/{acctID}")
 	public Customer getCustomerInfo(@PathVariable int acctID) {
 		return customerService.getCustomerInfo(acctID);
