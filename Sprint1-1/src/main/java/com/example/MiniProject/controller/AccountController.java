@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.MiniProject.model.Accounts;
 import com.example.MiniProject.model.Logger;
 import com.example.MiniProject.service.AccountService;
-//afdsasdf
+
 @RestController
 public class AccountController {
 	@Autowired
