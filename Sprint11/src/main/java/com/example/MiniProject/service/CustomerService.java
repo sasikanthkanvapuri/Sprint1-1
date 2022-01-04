@@ -22,6 +22,10 @@ public class CustomerService {
 	public void deleteCustomer(int acctID) {
 		customerRepository.deleteById(acctID);
 	}
+	public Customer login(int acctID, String password) {
+		  Customer user = customerRepository.findByacctIDAndPassword(acctID, password);
+		   return user;
+		}
 
 }
 

@@ -13,12 +13,10 @@ public class LoggerController {
 	@Autowired
 	private LoggerService loggerService;
 
-	// addLog
 	public void addLog(Logger logger) {
 		loggerService.addLog(logger);
 	}
 
-	// showLog
 	@GetMapping("/account/{acctID}/logs")
 	public Logger showLog(@PathVariable int acctID) {
 		return loggerService.showLog(acctID);

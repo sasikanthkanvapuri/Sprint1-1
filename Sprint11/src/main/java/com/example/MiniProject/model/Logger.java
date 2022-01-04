@@ -2,12 +2,13 @@ package com.example.MiniProject.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 
 @Entity
+@Table(name = "Logger")
 public class Logger {
- 
 	@Id
 	private int acctID;
 	private String transacType;
