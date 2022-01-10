@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
-//First Sprint
-//The great thing
 
 import com.example.MiniProject.model.Accounts;
 import com.example.MiniProject.model.Logger;
@@ -26,13 +24,13 @@ public class AccountController {
 		accountService.createAccount(acct);
 	}
 
-	// checkBalance
+	// checking the balance
 	@GetMapping("/account/{acctID}/balance")
 	public int getBalance(@PathVariable int acctID) {
 		return accountService.getBalance(acctID);
 	}
 
-	// depositAmount
+	// depositing the money
 	@PutMapping("/account/{acctID}/deposit/{amount}")
 	public void depositAmount(@PathVariable int acctID, @PathVariable int amount) {
 		int initBal = getBalance(acctID);
@@ -41,7 +39,7 @@ public class AccountController {
 		loggerController.addLog(logger);
 	}
 
-	// withdrawAmount
+	// withdrawing money
 	@PutMapping("/account/{acctID}/withdraw/{amount}")
 	public void withdrawAmount(@PathVariable int acctID, @PathVariable int amount) {
 		int initBal = getBalance(acctID);
@@ -50,7 +48,7 @@ public class AccountController {
 		loggerController.addLog(logger);
 	}
 
-	// transferAmount
+	// transfering the amount from one account to other
 	@PutMapping("/account/{acctID}/transfer/{destAcctID}/{amount}")
 	public void transferAmount(@PathVariable int acctID, @PathVariable int destAcctID, @PathVariable int amount) {
 		int initBalSender = getBalance(acctID);
@@ -63,17 +61,18 @@ public class AccountController {
 		loggerController.addLog(loggerReceiver);
 	}
 
-	// deleteAccount
+	// deleting an Account
 	@DeleteMapping("/account/{acctID}")
 	public void deleteAccount(@PathVariable int acctID) {
 		accountService.deleteAccount(acctID);
 		loggerController.deleteLog(acctID);
 	}
 
-	// getAccountInfo
+	// Account Info
 	@GetMapping("/account/{acctID}")
 	public Accounts getAccountInfo(@PathVariable int acctID) {
 		return accountService.getAccountInfo(acctID);
 	}
+	//Completed
 
 }
